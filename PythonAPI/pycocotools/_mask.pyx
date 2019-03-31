@@ -291,7 +291,7 @@ def frPyObjects(pyobj, h, w):
         objs = frBbox(pyobj, h, w)
     elif type(pyobj) == list and len(pyobj[0]) == 4:
         objs = frBbox(pyobj, h, w)
-    elif type(pyobj) == list and len(pyobj[0]) > 4:
+    elif type(pyobj) == list and len(pyobj[0]) > 0:
         objs = frPoly(pyobj, h, w)
     elif type(pyobj) == list and type(pyobj[0]) == dict \
         and 'counts' in pyobj[0] and 'size' in pyobj[0]:
